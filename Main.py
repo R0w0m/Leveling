@@ -1,7 +1,6 @@
 import time
 
 
-
 class LVLing():
     def __init__(self):
         # VAR
@@ -10,6 +9,7 @@ class LVLing():
         self.exercise_cost = {"Отжимание"   : 1,
                               "Приседание"  : 0.5,
                               "Подтягивание": 2,   }
+
 
     def begin(self):
         print("""
@@ -53,10 +53,6 @@ class LVLing():
         print("Not found")
 
 
-
-
-
 if __name__ == "__main__":
     LvL = LVLing()
     LvL.begin()
-
