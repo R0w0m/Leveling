@@ -7,6 +7,8 @@ class LVLing():
         self.credits = 0
         # Const
         self.exercise_cost = {"Отжимание"   : 1,
+                              "Отжимание на кулаках"   : 1.5,
+                              "Отжимание на пальцах"   : 1.5,
                               "Приседание"  : 0.5,
                               "Подтягивание": 2,   }
 
@@ -50,7 +52,17 @@ class LVLing():
 
 
     def do_exercise(self):
-        print("Not found")
+        exs = {}
+        x = 1
+        for i in self.exercise_cost:
+            print(f"{x}: {i:20} {self.exercise_cost[i]}")
+            exs[f"{x}"] = i
+            x+=1
+        while True:
+            try/except:
+                self.credits -= self.exercise_cost[exs[input("Введите номер: ")]] * int(input("Количество: "))
+            except:
+                pass
 
 
 if __name__ == "__main__":
